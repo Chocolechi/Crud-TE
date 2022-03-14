@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor | Dav</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/styles/main.css">
+</head>
+
+<body>
+
+
+    <div class="container p-5">
+        <div class="boxes">
+            <h1 class="title">Register</h1>
+            <div class="field">
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    <label for="" class="label">{{form.username.label}}</label>
+                    <div class="control">
+                        {{form.username}}
+                    </div>
+
+                    <label for="" class="label">{{form.password1.label}}</label>
+                    <div class="control">
+                        {{form.password1}}
+                    </div>
+
+                    <label for="" class="label">{{form.password2.label}}</label>
+                    <div class="control">
+                        {{form.password2}}
+                    </div>
+
+                    <input type="submit" class="button mt-2 is-link" value="Register">
+                </form>
+            </div>
+        
+        </div>
+    </div>
+    <div class="container pt-5">
+        <p class="subtitle has-text-centered">Alredy have an account?<a href="{% url 'login' %}"> Login </a></p>
+      </div>    
+
+    <script src="/static/js/app.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</body>
+{% include 'base/footer.html' %}
+
+</html>

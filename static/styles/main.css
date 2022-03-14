@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    padding:0px;
+    margin: 0px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+body{
+    background-color: #eee;
+}
+
+.navbar{
+    padding: 10px 0px;
+    background-color: #eee;
+}
+
+
+.text-editor-body{
+    margin-top: 10px;
+}
+
+.elmio{
+    min-height: 100%;
+}
+
+
+.btn{
+    border: none;
+}
+
+.content {
+    min-height: 300px;
+    border: 1px solid rgb(255, 241, 239);
+}
+
+.footer{
+    margin-top: 300px;
+    background-color: #eee;
+ 
+}
+.about{
+    margin-top: 40px;
+}
+
+.card{
+    max-width: 20%;
+    margin-bottom: 30px;
+    max-height: 200px;
+}
+
+.boxes{
+    width:550px;
+    margin: auto;
+    background-color: #eee;
+    padding: 10px ;
+    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+}
+

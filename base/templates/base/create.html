@@ -1,0 +1,19 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<div class="container mt-6 ">
+    <form action="" method="POST" class="p-5 ">
+
+        {% csrf_token %}
+        {{form.media}}
+        {{form.as_p}}
+
+        <a href="{% url 'files' %}" class="button is-link is-dark pt-2"> Back </a>
+        <input type="submit" name="" id="" class="button is-link pt-2">
+
+    </form>
+</div>
+
+
+{% endblock content %}

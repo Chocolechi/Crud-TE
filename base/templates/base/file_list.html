@@ -1,0 +1,53 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+<div class="container">
+  <!-- Body section -->
+  <section class="section">
+
+    <article class="">
+      <h1 class="title">
+        Welcome, {{ user.username|title }}.
+      </h1>
+
+      <p class="subtitle">To know more about the page click on <a href="{% url 'about' %}">HERE</a>!
+      </p>
+    </article>
+
+</div>
+</div>
+</section>
+
+
+<div class="container">
+  <a class="button is-link is-dark is-fullwidth" href="{% url 'file-create' %}">Add file</a>
+  <br>
+  <div>
+    <div class="container">
+      <div class="columns is-multiline is-mobile is-variable  ">
+        {% for file in files %}
+        <div class="card column m-4 mx-5">
+          <header class="card-header">
+            <p class="card-header-title">
+              <a href="">{{ file.title}}</a>
+            </p>
+          </header>
+          <footer class="card-footer">
+            <!-- <a href="#" class="card-footer-item">Save</a> -->
+            <a href="{% url 'file-update' file.id %}" class="card-footer-item">Edit</a>
+            <a href="{% url 'file-delete' file.id %}" class="card-footer-item">Delete</a>
+          </footer>
+        </div>
+
+        {% empty %}
+        <div class="container pt-5">
+          <p class="subtitle has-text-centered">No items in list. To add items click on <a href=""> Add File </a> above.</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
