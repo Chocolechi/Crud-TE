@@ -17,5 +17,5 @@ urlpatterns = [
     path('file-create/', FileCreate.as_view(), name="file-create"),
     path('file-update/<int:pk>/', FileUpdate.as_view(), name="file-update"),
     path('file-delete/<int:pk>/', FileDelete.as_view(), name="file-delete"),
-    
+   
 ]
